@@ -1,5 +1,6 @@
 name: Upstream Sync
 
+
 permissions:
   contents: write
   issues: write
@@ -34,6 +35,7 @@ jobs:
           target_sync_branch: main
           target_repo_token: ${{ secrets.GITHUB_TOKEN }} # automatically generated, no need to set
           test_mode: false
+          token: ${{ secrets.WORKFLOW_TOKEN }}
 
       - name: Sync check
         if: failure()
